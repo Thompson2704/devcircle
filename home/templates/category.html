@@ -1,0 +1,34 @@
+{% extends 'base.html' %} 
+{% load humanize %}
+
+{% block header %} {% include 'header.html' %} {%endblock header %} 
+{% block banner %} {% include 'banner.html' %} {% endblock banner %}
+{% block content %}
+
+<div class="container mt-5 mb-5">
+  <h1 class="text-center display-4 title">{{categ.brand}}</h1>
+    <div class="row text-center justify-content-center">
+      {% if phonebrand %}
+          {% for item in phonebrand %}
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5 mb-5">
+            <div class="card" style="height: 500px;">
+              <img style="height: 250px;" src="{{item.pix.url}}" class="card-img-top mt-4" alt="..." style="height: 250px;">
+              <span class="line mt-3"></span>
+              <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                {% if item.discount_price %}
+                    <span><del><p class="card-text">₦{{item.price|floatformat:2|intcomma}}</p></del></span>
+                    <p class="card-text">₦{{item.discount_price|floatformat:2|intcomma}}</p>
+                {% else %}  
+                    <p class="card-text">₦{{item.price|floatformat:2|intcomma}}</p>
+                {% endif %}
+                <a href="{% url 'detail' item.id item.slug %}" class="btn btn-primary">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+{% endblock content %} 
+{% block footer %} {% include 'footer.html' %} {% endblock footer %}

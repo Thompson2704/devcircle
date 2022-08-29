@@ -1,0 +1,51 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block header %} {% include 'header.html' %} {%endblock header %} 
+{% block banner %} {% include 'banner.html' %} {% endblock banner %}
+{% block content %}
+
+<div class="container-fluid mt-5 mb-5">
+  <h1 class="text-center title">{{userprof.user.username|title}} Dashboard</h1>
+  <div class="row">
+    <div class="col-12 col-md-4 col-lg-4 profavat">
+      <img style="height: 300px;" src="{{userprof.pix.url}}" alt=""> 
+    </div>
+    <div class="col-12 col-md-4 col-lg-4">
+      <form class="mt-5 ship" action="">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">First Name</label>
+          <input type="text" class="form-control" value="{{userprof.first_name}}" id="exampleFormControlInput1" placeholder="Type in your first name">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+          <input type="text" class="form-control" value="{{userprof.last_name}}" id="exampleFormControlInput1" placeholder="Type in your last name">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+          <input type="email" class="form-control" value="{{userprof.email}}" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Phone</label>
+          <input type="email" class="form-control" value="{{userprof.phone}}" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Delivery address</label>
+          <input type="text" class="form-control" value="{{userprof.address}}" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+      </form>
+    </div>
+    <div class="col-12 col-md-4 col-lg-4 uselink">
+        <h3>Useful Links</h3>
+        <ul class="list-unstyled">
+          <li><a href="index.html"><i class="bi bi-caret-right-fill"></i> Home</a></li>
+          <li><a href="{% url 'profile' %}"><i class="bi bi-caret-right-fill"></i> Profile </a></li>
+          <li><a href="{% url 'profile_update' %}"><i class="bi bi-caret-right-fill"></i> Profile Update</a></li> 
+          <li><a href="{% url 'password_update' %}"><i class="bi bi-caret-right-fill"></i> Password Update</a></li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock content %} 
+{% block footer %} {% include 'footer.html' %} {% endblock footer %}

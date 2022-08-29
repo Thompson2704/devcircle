@@ -1,0 +1,20 @@
+{% extends 'base.html' %} 
+{% load humanize %}
+
+{% block header %} {% include 'header.html' %} {%endblock header %} 
+{% block banner %} {% include 'banner.html' %} {% endblock banner %}
+{% block content %}
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col-8 col-lg-6 pt-4">
+      <img style="height: 100px;" src="{{about.logo.url}}" alt="DevLogo">
+    </div> 
+    <div class="col-8 col-lg-6">
+      <h1 class="text-center">About Us</h1>
+      <p>{{about.about}}</p>
+    </div> 
+  </div>
+</div>
+
+{% endblock content %} 
+{% block footer %} {% include 'footer.html' %} {% endblock footer %}
