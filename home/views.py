@@ -205,7 +205,7 @@ def add_to_cart(request):
                 basket.qty += quantity
                 basket.amount = main.price * basket.qty
                 basket.save()
-                messages.success(request, format_html("one item added... <a href='http://3.89.195.2/cart'>view cart</a>"))
+                messages.success(request, format_html("one item added... <a href='http://18.208.147.27/cart'>view cart</a>"))
                 return redirect('home')
             else:
                 newitem = Cart()
@@ -216,7 +216,7 @@ def add_to_cart(request):
                 newitem.amount = main.price * quantity
                 newitem.paid = False
                 newitem.save()
-                messages.success(request, format_html("one item added... <a href='http://3.89.195.2/cart'>view cart</a>"))
+                messages.success(request, format_html("one item added... <a href='http://18.208.147.27/cart'>view cart</a>"))
                 return redirect('home')
         else:
             newcart = Cart()
@@ -227,7 +227,7 @@ def add_to_cart(request):
             newcart.amount = main.price * quantity
             newcart.paid = False
             newcart.save()
-            messages.success(request, format_html("one item added... <a href='http://3.89.195.2/cart'>view cart</a>"))
+            messages.success(request, format_html("one item added... <a href='http://18.208.147.27'>view cart</a>"))
             return redirect('home')
 
 @login_required(login_url='signin')

@@ -259,9 +259,8 @@ body{
   border: 1px solid #856407;
 }
 
-.carttotal {
-  /* margin-left: 70%; */
-}
+
+
 .carttotal p {
   color: #000;
   text-transform: capitalize;
@@ -404,4 +403,4 @@ body{
     outline: 2px solid #856407;
     padding: 20px;
     border-radius: 3rem;
-}
+  }
