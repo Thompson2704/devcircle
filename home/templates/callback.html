@@ -4,8 +4,25 @@
 {% block header %} {% include 'header.html' %} {%endblock header %} 
 {% block banner %} {% include 'banner.html' %} {% endblock banner %}
 {% block content %}
-<div class="container mt-5 mb-5">
-  <h1 class="title text-center">Thank you</h1>
+<div class="container-fluid mt-5 mb-5">
+  <h1 class="text-center title">Order Confirmation</h1>
+  <div class="row">
+    <div class="col-12 col-md-4 col-lg-4 profavat">
+      <img style="height: 300px;" src="{{userprof.pix.url}}" alt="">
+    </div>
+    <div class="col-12 col-md-4 col-lg-4 callback">
+        <p>Hello <span>{{userprof.user|title}},</span> your order for iPhone 13 Pro has been received and confirmed. our representative will contact you shortly. Thank you for your patronage.</p>
+    </div>
+    <div class="col-12 col-md-4 col-lg-4 uselink">
+        <h3>Useful Links</h3> 
+        <ul class="list-unstyled">
+          <li><a href="{% url 'home' %}"><i class="bi bi-caret-right-fill"></i> Home</a></li>
+          <li><a href="{% url 'profile' %}"><i class="bi bi-caret-right-fill"></i> Profile </a></li>
+          <li><a href="{% url 'profile_update' %}"><i class="bi bi-caret-right-fill"></i> Profile Update</a></li>
+          <li><a href="{% url 'password_update' %}"><i class="bi bi-caret-right-fill"></i> Password Update</a></li>
+        </ul>
+    </div>
+  </div>
 </div>
 {% endblock content %} 
 {% block footer %} {% include 'footer.html' %} {% endblock footer %}

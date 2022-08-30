@@ -8,6 +8,8 @@ from django.core.paginator import Paginator
 from django.contrib import messages 
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth.decorators import login_required
+from django.utils.html import format_html
 from . models import CompanyProfile, Phone, Type
 from . forms import ContactForm
 from userprofile.models import Customer, Cart, Payment
@@ -340,7 +342,23 @@ def pay(request):
             return redirect(rdurl)
     return redirect('checkout')
 
-def callback(request):
-    return render(request, 'callback.html')
+@login_required(login_url='signin')
+def callback(request): #this empties the cart of a particular user after payment
+    userprof = Customer.objects.get(user__username = request.user.username)
+    cart = Cart.objects.filter(user__username = request.user.username, paid = False)
+
+    for item in cart:
+        item.paid = True
+        item.save()
+
+        phone = Phone.objects.get(pk=item.phone.id)
+
+    context = {
+        'userprof':userprof,
+        'cart':cart,
+        'phone':phone,
+    }
+
+    return render(request, 'callback.html', context)
 
 
