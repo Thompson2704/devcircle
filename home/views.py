@@ -192,6 +192,7 @@ def password_update(request):
 #userprofile done
 
 # cart
+@login_required(login_url='signin')
 def add_to_cart(request):
     if request.method == 'POST':
         quantity = int(request.POST['quantity'])
@@ -204,7 +205,7 @@ def add_to_cart(request):
                 basket.qty += quantity
                 basket.amount = main.price * basket.qty
                 basket.save()
-                messages.success(request, 'one item added to cart')
+                messages.success(request, format_html("one item added... <a href='http://3.89.195.2/cart'>view cart</a>"))
                 return redirect('home')
             else:
                 newitem = Cart()
@@ -215,7 +216,7 @@ def add_to_cart(request):
                 newitem.amount = main.price * quantity
                 newitem.paid = False
                 newitem.save()
-                messages.success(request, 'one item added to cart')
+                messages.success(request, format_html("one item added... <a href='http://3.89.195.2/cart'>view cart</a>"))
                 return redirect('home')
         else:
             newcart = Cart()
@@ -226,9 +227,10 @@ def add_to_cart(request):
             newcart.amount = main.price * quantity
             newcart.paid = False
             newcart.save()
-            messages.success(request, 'one item added to cart')
+            messages.success(request, format_html("one item added... <a href='http://3.89.195.2/cart'>view cart</a>"))
             return redirect('home')
 
+@login_required(login_url='signin')
 def cart(request):
     cart = Cart.objects.filter(user__username = request.user.username, paid = False)
     for item in cart:
@@ -254,6 +256,7 @@ def cart(request):
 
     return render(request, 'cart.html', context)
 
+@login_required(login_url='signin')
 def increase(request):
     if request.method == 'POST':
         qty_item = request.POST['quant_id']
@@ -265,6 +268,7 @@ def increase(request):
         messages.success(request, 'quantity updated')
         return redirect('cart')
 
+@login_required(login_url='signin')
 def delete(request):
     if request.method == 'POST':
         del_item = request.POST['del_id']
@@ -273,7 +277,7 @@ def delete(request):
         return redirect('cart')
 
 # cart done
-
+@login_required(login_url='signin')
 def checkout(request):
     userprof = Customer.objects.get(user__username = request.user.username)
     cart = Cart.objects.filter(user__username = request.user.username, paid = False)
@@ -301,6 +305,7 @@ def checkout(request):
 
     return render(request, 'checkout.html', context)
 
+@login_required(login_url='signin')
 def pay(request):
     if request.method == 'POST':
         api_key = 'sk_test_2bce4f649d829dc28eb7bdab6439cb8a66e2bb68' #secret key from paystack

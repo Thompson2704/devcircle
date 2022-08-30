@@ -49,24 +49,24 @@ body{
 } */
 
 .authlist a:hover{
-  color: #7d3054;
+  color: #856407;
 }
 
 .avat img {
   border-radius: 100%;
   width: 40px;
-  outline: 2px solid #7d3054;
+  outline: 2px solid #856407;
 }
 
 .cont i {
-  color: #7d3054;
+  color: #856407;
 }
 
 /* Styling topbar done */
 
 /* navbar  */
 .navbar {
-  background: rgba(133, 57, 113, 0.372);
+  background: rgba(173, 119, 11, 0.372);
 }
 
 .navbar-nav a {
@@ -78,7 +78,7 @@ body{
 }
 
 .dropdown ul {
-  background: rgba(133, 57, 113, 0.372);
+  background: rgba(173, 119, 11, 0.372);
 }
 
 /* navbar done  */
@@ -89,7 +89,7 @@ body{
   color: black;
 }
 .carousel-indicators .active {
-  background: #7d3054 !important;
+  background: #856407 !important;
 }
 
 /* carousel done  */
@@ -97,8 +97,8 @@ body{
 /* Content  */
 .card {
   border-radius: 2rem 0 !important;
-  outline: 2px solid #7d3054;
-  box-shadow: 0 0 10px 0 #7d3054;
+  outline: 2px solid #856407;
+  box-shadow: 0 0 10px 0 #856407;
   transition: 4s;
 }
 
@@ -116,25 +116,25 @@ body{
 }
 
 .line {
-  border-bottom: 3px solid #7d3054;
+  border-bottom: 3px solid #856407;
 }
 
 .card-body .btn {
-  background: #7d3054;
+  background: #856407;
   border: none;
 }
 
 .card-body .btn:hover {
-  background: #7d3054;
+  background: #856407;
   color: #000;
 }
 
 .pagination a {
-  color: #7d3054;
+  color: #856407;
 }
 
 .pagination li a:hover {
-  background: #7d3054 !important;
+  background: #856407 !important;
   color: #fff;
 }
 
@@ -147,13 +147,13 @@ body{
   display: block;
   width: 180px;
   height: 3px;
-  background: #7d3054;
+  background: #856407;
   margin-left: auto;
   margin-right: auto;
 }
 
 .footer1 {
-  background: #7d305454;
+  background: #856407;
   padding: 3% 0;
 }
 
@@ -162,7 +162,7 @@ body{
 }
 
 .footbox2 {
-  border-left: 1px solid #7d3054;
+  border-left: 1px solid #856407;
 }
 
 .footbox2 ul {
@@ -175,7 +175,7 @@ body{
 }
 
 .footbox3 {
-  border-left: 1px solid #7d3054;
+  border-left: 1px solid #856407;
 }
 
 .footbox3 ul {
@@ -183,7 +183,7 @@ body{
 }
 
 .footbox3 ul li i {
-  color: #7d3054;
+  color: #856407;
   transition: 1s;
 }
 
@@ -215,7 +215,7 @@ body{
 }
 .phonedet h5 {
   font-weight: 700;
-  color: #7d3054;
+  color: #856407;
 }
 
 /* Detail done  */
@@ -223,7 +223,7 @@ body{
 /* Contact  */
 
 .contbtn {
-  background: #7d3054 !important;
+  background: #856407 !important;
   color: white !important;
   width: 100px;
 }
@@ -242,10 +242,10 @@ body{
 /* Styling Cart  */
 .cart table {
   width: 90%;
-  outline: 1px solid #7d3054;
+  outline: 1px solid #856407;
 }
 .cart thead {
-  background: #7d3054;
+  background: #856407;
   text-align: center;
 }
 .cart th {
@@ -256,7 +256,7 @@ body{
   text-align: center;
 }
 .cart tbody td {
-  border: 1px solid #7d3054;
+  border: 1px solid #856407;
 }
 
 .carttotal {
@@ -269,7 +269,7 @@ body{
 }
 
 .cartbtn {
-  background: #7d3054 !important;
+  background: #856407 !important;
   color: white !important;
 }
 
@@ -277,7 +277,7 @@ body{
 
 /* checkout  */
 .ship {
-  border: 1px solid #7d3054;
+  border: 1px solid #856407;
   padding: 10px;
 }
 
@@ -293,7 +293,7 @@ body{
 /* profile  */
 .profavat img{
   border-radius: 100%;
-  outline: 2px solid #7d3054;
+  outline: 2px solid #856407;
 }
 .uselink{
   padding-top: 5%;
@@ -311,7 +311,7 @@ body{
 
 }
 .uselink i{
-  color: #7d3054;
+  color: #856407;
 }
 
 
@@ -320,7 +320,7 @@ body{
 /* callback */
 .callback p{
   text-transform: capitalize;
-  color: #7d3054;
+  color: #856407;
   margin-top: 5%;
   font-size: 20px;
 }
@@ -337,21 +337,21 @@ body{
   width: 50%;
   margin-left: 25%;
   margin-right: 25%;
-  outline: 2px solid #7d3054;
+  outline: 2px solid #856407;
   padding: 20px;
   border-radius: 1rem;
 }
 
 .signup form input{
-  border-color: #7d3054;
+  border-color: #856407;
 
 }
 .signup form input:focus{
   box-shadow: none;
-  border-color: #7d3054;
+  border-color: #856407;
 }
 .login i{
-  color: #7d3054;
+  color: #856407;
 }
 
 .pass{
@@ -382,7 +382,7 @@ body{
 @media (max-width: 1400px){
   .provat img{
     border-radius: 100%;
-    outline: 2px solid #7d3054;
+    outline: 2px solid #856407;
     height: 300px;
   }
 }
@@ -393,7 +393,7 @@ body{
   }
   .provat img{
     border-radius: 100%;
-    outline: 2px solid #7d3054;
+    outline: 2px solid #856407;
     height: 100px;
     margin-left: 40%;
   }
@@ -401,7 +401,7 @@ body{
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-    outline: 2px solid #7d3054;
+    outline: 2px solid #856407;
     padding: 20px;
     border-radius: 3rem;
 }
